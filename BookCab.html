@@ -1,0 +1,129 @@
+<?php
+require('NavigationCustomer.html');
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome</title>
+<style>
+/*div{
+	background-color: lightblue;
+}*/
+
+body{
+  background-image: url('images/taxi_cab_pic.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+form {
+  /*border: 1px solid #79c199;*/
+  margin: 100px 500px 600px 40px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 4px 5px;
+  margin: 20px 0;
+  /*display: inline-block;*/
+  border: 4px solid #ccc;
+  box-sizing: border-box;
+}
+/* Set a style for all buttons */
+button {
+  background-color: seagreen;
+  color: white;
+  padding: 14px 20px;
+  margin: 10px 0;
+  margin-left:20%;
+  border: none;
+  cursor: pointer;
+  width: 40% ;
+}
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+.submitbtn {
+  background-color: seagreen;
+  color: white;
+  padding: 14px 20px;
+  margin: 10px 0;
+  margin-left:20%;
+  border: none;
+  cursor: pointer;
+  width: 60% ;
+}
+
+</style>
+</head>
+<body>
+
+  <h1><p style="color:white;font-size:45px">Welcome to Vehicle Management Portal </p></h1> 
+ 
+<!-- <div style="border:2px solid black;background-color: skyblue; margin-left:10%;margin-right:40%">
+ -->
+ <div style="background-color:white;
+ background-repeat: no-repeat;
+  background-size:600px 800px;margin-right:60%;padding-right:2%;/*opacity:0.8;font-color:white*/; ">
+
+
+<form action="BookCab.php" method="POST" style="margin-left:10%;margin-right:10%">
+
+  <div>
+    <img src="images/Gif_car.gif" alt=user width="160" height="150" style="margin-left:150px;padding:20px;border-radius: 50%;">
+  </div>
+
+  <div>
+    <label for="email_id"><b>Username</b></label>
+    <input type="text" placeholder="Enter Email" name="email_id" required>
+    <br/>
+    <label for="pickup"><b>Pick-up Location</b></label>
+    <input type="text" placeholder="Enter pickup location" name="pickup" required>
+
+ <label for="drop"><b>Drop Location</b></label>
+    <input type="text" placeholder="Enter Drop location" name="drop" required>
+    <p><b>Journey(date and time)</b></p>
+
+               <label for="JourneydateF">To:</label>
+            <input type="date" id="journeydateF" name="journeydateF" required><br>
+
+            <label for="JourneytimeF">To:</label>
+            <input type="time" id="journeyTimeF" name="journeytimeF" required><br>
+
+            <label for="JourneydateT">From:</label>
+            <input type="date" id="journeydateT" name="journeydateT" required><br>
+
+            <label for="JourneytimeT">From:</label>
+            <input type="time" id="journeyTimeT" name="journeytimeT" required><br>
+          <p><b>Select vehicle type</b></p>
+          <select id="cars" name="cars">
+              <option value="Hatchback">Hatchback</option>
+              <option value="Sedan">Sedan</option>
+              <option value="SUV">SUV</option>
+              <option value="MUV">MUV</option>
+            </select>
+
+    <br/>
+    <input type="submit"  name="submit" value="BOOK CAB" class="submitbtn">
+    <br/>
+    <label>
+  <!--    <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>-->
+  </div>
+
+  
+    <button type="button" class="submitbtn">CANCEL</button>
+    <!--<span class="psw"> <a href="https://www.w3schools.com/html/">Register?</a></span>-->
+	
+  
+</form>
+
+</div>
+
+
+
+</body>
+
+</html> 
